@@ -1,8 +1,11 @@
-package commands;
+package main.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class ToggleLift extends Command{
+public class MecanumDrive extends Command {
+    public MecanumDrive(){
+        requires(null);
+    }
 
     @Override
     protected boolean isFinished() {

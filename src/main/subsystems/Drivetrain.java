@@ -1,7 +1,7 @@
-package subsystems;
+package main.subsystems;
 
 import com.ctre.CANTalon;
-import commands.MecanumDrive;
+import main.commands.MecanumDrive;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
@@ -31,7 +31,7 @@ public class Drivetrain extends Subsystem{
         robotDrive.setInvertedMotor(RobotDrive.MotorType.kFrontRight, true);
         robotDrive.setInvertedMotor(RobotDrive.MotorType.kRearRight, true);
     }
-    
+
     @Override
     protected void initDefaultCommand() {
         setDefaultCommand(new MecanumDrive());

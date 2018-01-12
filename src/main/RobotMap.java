@@ -1,3 +1,5 @@
+package main;
+
 import edu.wpi.cscore.CvSource;
 
 public class RobotMap {

@@ -1,3 +1,5 @@
+package main;
+
 import edu.wpi.cscore.CvSink;
 import edu.wpi.cscore.MjpegServer;
 import edu.wpi.cscore.UsbCamera;
@@ -7,7 +9,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.opencv.core.Mat;
-import subsystems.Drivetrain;
+import main.subsystems.Drivetrain;
 
 public class Robot extends IterativeRobot{
     public static OI oi;
