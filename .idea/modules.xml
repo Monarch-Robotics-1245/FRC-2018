@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FRCCode2018.iml" filepath="$PROJECT_DIR$/FRCCode2018.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FRCCode2018_main.iml" filepath="$PROJECT_DIR$/.idea/modules/FRCCode2018_main.iml" group="FRCCode2018" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FRCCode2018_test.iml" filepath="$PROJECT_DIR$/.idea/modules/FRCCode2018_test.iml" group="FRCCode2018" />
     </modules>
   </component>
 </project>
