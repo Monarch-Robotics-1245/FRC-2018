@@ -1,5 +1,7 @@
 package frc.team1245.robot;
 
+import edu.wpi.first.wpilibj.XboxController;
+
 public class OI {
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.
@@ -28,8 +30,13 @@ public class OI {
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
 
+
+    public static XboxController driverPad;
+
+
     public OI(){
         //Initialize Joysticks and Controllers here
+        driverPad = new XboxController(0);
 
     }
 
@@ -43,5 +50,8 @@ public class OI {
             }
         }
         return 0;
+    }
+    public static double scaleSpeed(double val, double scale){
+        return val*scale;
     }
 }

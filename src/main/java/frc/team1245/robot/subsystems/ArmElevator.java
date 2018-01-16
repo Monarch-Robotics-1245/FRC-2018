@@ -23,7 +23,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
         }
 
         public ArmElevator(int forwardLifterChannel, int reverseLifterChannel,
-                      int forwardLifterPressureChannel, int reverseLifterPressureChannel){
+                           int forwardLifterPressureChannel, int reverseLifterPressureChannel){
             // Initialize the actuation the double solenoid
             lifterSolenoid = new DoubleSolenoid(forwardLifterChannel, reverseLifterChannel);
             // The lifter will be in the down position initially

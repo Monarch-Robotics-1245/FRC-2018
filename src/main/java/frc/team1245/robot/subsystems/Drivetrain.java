@@ -1,7 +1,6 @@
 package frc.team1245.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.MecanumDrive;
@@ -36,5 +35,9 @@ public class Drivetrain extends Subsystem{
     @Override
     protected void initDefaultCommand() {
         setDefaultCommand(new DriveMecanum());
+    }
+
+    public MecanumDrive getDrivetrain(){
+        return robotDrive;
     }
 }

@@ -1,4 +1,4 @@
-package main.java.frc.team1245.robot.commands;
+package frc.team1245.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 
