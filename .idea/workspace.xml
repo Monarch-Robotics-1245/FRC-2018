@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7e16251-1951-4ce1-b6de-d03c1c2bb5d0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team1245/robot/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team1245/robot/Robot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team1245/robot/RobotMap.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team1245/robot/RobotMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team1245/robot/commands/ZanathyrsGrasp.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team1245/robot/commands/ZanathyrsGrasp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/frc/team1245/robot/subsystems/Gripper.java" afterPath="$PROJECT_DIR$/src/main/java/frc/team1245/robot/subsystems/Gripper.java" />
-    </list>
+    <list default="true" id="e7e16251-1951-4ce1-b6de-d03c1c2bb5d0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -134,8 +128,8 @@
       <file leaf-file-name="ZanathyrsGrasp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/frc/team1245/robot/commands/ZanathyrsGrasp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="52" lean-forward="false" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+            <state relative-caret-position="360">
+              <caret line="24" column="53" lean-forward="true" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#308#309#0" expanded="true" />
@@ -978,6 +972,14 @@
       <option name="presentableId" value="Default" />
       <updated>1515623108803</updated>
     </task>
+    <task id="LOCAL-00001" summary="Programmed Gripper + Zanathyr's Grasp">
+      <created>1516148795948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1516148795948</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1018,6 +1020,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Programmed Gripper + Zanathyr's Grasp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Programmed Gripper + Zanathyr's Grasp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1153,8 +1159,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frc/team1245/robot/commands/ZanathyrsGrasp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="52" lean-forward="false" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+        <state relative-caret-position="360">
+          <caret line="24" column="53" lean-forward="true" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#308#309#0" expanded="true" />
