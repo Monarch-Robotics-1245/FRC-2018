@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import frc.team1245.robot.subsystems.Drivetrain;
+import frc.team1245.robot.subsystems.Gripper;
 import org.opencv.core.Mat;
 
 
@@ -15,6 +16,7 @@ public class Robot extends IterativeRobot{
     public static OI oi;
     public static Drivetrain drivetrain = new Drivetrain(RobotMap.getFrontLeft(), RobotMap.getFrontRight(),
             RobotMap.getRearLeft(), RobotMap.getRearRight());
+    public static Gripper gripper = new Gripper(RobotMap.getLeftArmOfZanathyr(), RobotMap.getRightArmOfZanathyr());
     private Command autonomousCommand;
 
     private Thread visionThread;

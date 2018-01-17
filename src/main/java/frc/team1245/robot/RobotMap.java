@@ -9,6 +9,9 @@ public class RobotMap {
     private static final int frontRight = 4;
     private static final int rearRight = 1;
 
+    private static final int leftArmOfZanathyr = 5;
+    private static final int rightArmOfZanathyr = 6;
+
     //Output stream for camera on dashboard
     private static CvSource cameraOutputStream;
 
@@ -32,12 +35,16 @@ public class RobotMap {
         return rearRight;
     }
 
+    public static int getLeftArmOfZanathyr() { return leftArmOfZanathyr; }
+
+    public static int getRightArmOfZanathyr() { return rightArmOfZanathyr; }
+
     public static CvSource getCameraOutputStream(){
         return cameraOutputStream;
     }
 
     public static double getTranslationalDeadZone(){
-        if (translationalDeadZone == 1){
+        if (translationalDeadZone == 1) {
             return .99;
         }
         return translationalDeadZone;
