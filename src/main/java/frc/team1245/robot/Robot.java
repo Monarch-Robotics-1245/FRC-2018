@@ -16,7 +16,7 @@ public class Robot extends IterativeRobot{
     public static OI oi;
     public static Drivetrain drivetrain = new Drivetrain(RobotMap.getFrontLeft(), RobotMap.getFrontRight(),
             RobotMap.getRearLeft(), RobotMap.getRearRight());
-    public static Gripper gripper = new Gripper();
+    public static Gripper gripper = new Gripper(RobotMap.getLeftArmOfZanathyr(), RobotMap.getRightArmOfZanathyr());
     private Command autonomousCommand;
 
     private Thread visionThread;

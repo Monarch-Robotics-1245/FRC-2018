@@ -67,4 +67,18 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
                 SmartDashboard.putString("Lifter Pressure", "Low");
             }
         }
+
+        //set pressure to high
+        public void setPressureHigh(){
+            if (!(airPressureSolenoid.get() == Value.kReverse)){
+                airPressureSolenoid.set(Value.kReverse);
+            }
+        }
+
+        //set pressure to low
+        public void setPressureLow(){
+            if (!(airPressureSolenoid.get() == Value.kForward)){
+                airPressureSolenoid.set(Value.kForward);
+            }
+        }
     }

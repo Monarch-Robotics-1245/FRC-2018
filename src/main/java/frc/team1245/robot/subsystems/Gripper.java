@@ -11,6 +11,10 @@ public class Gripper extends Subsystem{
     public Gripper(int leftArm, int rightArm) {
         this.leftArmOfZanathyr = new WPI_TalonSRX(leftArm);
         this.rightArmOfZanathyr = new WPI_TalonSRX(rightArm);
+
+        //They need to spin opposite ways
+        this.leftArmOfZanathyr.setInverted(true);
+        this.rightArmOfZanathyr.setInverted(false);
     }
 
     @Override
