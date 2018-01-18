@@ -12,11 +12,12 @@ public class ToggleLift extends Command{
     }
 
     protected void execute() {
-        if (Robot.elevator.getValue() == DoubleSolenoid.Value.kForward) {
-            Robot.elevator.setReverse();
-        }
-        else {
-            Robot.elevator.setForward();
+        if (OI.driverPad.getAButtonPressed()) {
+            if (Robot.elevator.getValue() == DoubleSolenoid.Value.kForward) {
+                Robot.elevator.setReverse();
+            } else {
+                Robot.elevator.setForward();
+            }
         }
     }
 
