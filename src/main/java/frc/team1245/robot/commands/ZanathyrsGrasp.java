@@ -20,12 +20,12 @@ public class ZanathyrsGrasp extends Command {
     @Override
     protected void execute() {
         if (OI.driverPad.getTriggerAxis(GenericHID.Hand.kRight) > 0.5) {
-            Robot.gripper.rightArmOfZanathyr.set(-0.5);
+            Robot.gripper.rightArmOfZanathyr.set(0.5);
             Robot.gripper.leftArmOfZanathyr.set(0.5);
         }
         else if (OI.driverPad.getTriggerAxis(GenericHID.Hand.kLeft) > 0.5) {
             Robot.gripper.rightArmOfZanathyr.set(0.5);
-            Robot.gripper.leftArmOfZanathyr.set(-0.5);
+            Robot.gripper.leftArmOfZanathyr.set(0.5);
         }
         else {
             Robot.gripper.rightArmOfZanathyr.set(0);
