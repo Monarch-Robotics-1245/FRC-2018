@@ -37,7 +37,8 @@ public class OI {
     public OI(){
         //Initialize Joysticks and Controllers here
         driverPad = new XboxController(0);
-
+        //left joystick 'true' movement
+        //right joystick rotational movement
     }
 
     //Dead Zone Function

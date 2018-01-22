@@ -4,10 +4,10 @@ import edu.wpi.cscore.CvSource;
 
 public class RobotMap {
     // Talon SRX channels
-    private static final int frontLeft = 3;
-    private static final int rearLeft = 2;
-    private static final int frontRight = 4;
-    private static final int rearRight = 1;
+    private static final int frontLeft = 0;
+    private static final int rearLeft = 1;
+    private static final int frontRight = 15;
+    private static final int rearRight = 14;
 
     private static final int leftArmOfZanathyr = 5;
     private static final int rightArmOfZanathyr = 6;
@@ -65,5 +65,11 @@ public class RobotMap {
             return .99;
         }
         return translationalDeadZone;
+    }
+    public static double getRotationalDeadZone(){
+        if (rotationalDeadZone == 1){
+            return .99;
+        }
+        return rotationalDeadZone;
     }
 }

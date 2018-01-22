@@ -21,7 +21,7 @@ public class DriveMecanum extends Command {
         // Get joystick input and filter it through the dead zone function
         double y = OI.scaleSpeed(-OI.deadZone(OI.driverPad.getX(GenericHID.Hand.kLeft), RobotMap.getTranslationalDeadZone()), 1);
         double x = OI.scaleSpeed(-OI.deadZone(OI.driverPad.getY(GenericHID.Hand.kLeft), RobotMap.getTranslationalDeadZone()), 1);
-        double twist = OI.scaleSpeed(OI.deadZone(OI.driverPad.getX(GenericHID.Hand.kRight), RobotMap.getTranslationalDeadZone()), 1);
+        double twist = OI.scaleSpeed(OI.deadZone(OI.driverPad.getX(GenericHID.Hand.kRight), RobotMap.getRotationalDeadZone()), 1);
 
         // Drive the robot based on the user input
         Robot.drivetrain.getDrivetrain().driveCartesian(x,y,twist,0);
