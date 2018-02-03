@@ -2,4 +2,7 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="org.usfirst.frc.team1245.robot.commands.ToggleLift"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DoubleSolenoid.Value"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Talon"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.GenericHID.Hand"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Solenoid"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,31 @@
+package org.usfirst.frc.team1245.robot.commands;
+
+import edu.wpi.first.wpilibj.command.Command;
+
+import org.usfirst.frc.team1245.robot.OI;
+import org.usfirst.frc.team1245.robot.Robot;
+
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
+
+public class ToggleLift extends Command{
+
+    public ToggleLift() {
+        requires(Robot.elevator);
+    }
+
+    protected void execute() {
+        if (OI.driverPad.getAButtonPressed()) {
+            if (Robot.elevator.getValue()==Value.kForward) {
+                Robot.elevator.setForward();
+            } else {
+                Robot.elevator.setReverse();
+            }
+        }
+    }
+
+    @Override
+    protected boolean isFinished() {
+        return false;
+    }
+}
