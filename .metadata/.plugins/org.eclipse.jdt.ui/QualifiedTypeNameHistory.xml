@@ -4,5 +4,23 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DoubleSolenoid.Value"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Talon"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.GenericHID.Hand"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.Subsystem"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.command.Command"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1245.robot.commands.ReleaseGripper"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1245.robot.subsystems.ReleaseSolenoid"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1245.robot.OI"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DriverStation"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1245.robot.commands.GyroDrive"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1245.robot.Driver"/>
+<fullyQualifiedTypeName name="edu.wpi.cscore.CvSource"/>
+<fullyQualifiedTypeName name="org.opencv.imgproc.Imgproc"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1245.robot.RobotMap"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Solenoid"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.interfaces.Gyro"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SendableChooser"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1245.robot.Robot"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1245.robot.Side"/>
 </qualifiedTypeNameHistroy>
