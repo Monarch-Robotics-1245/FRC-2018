@@ -10230,3 +10230,12 @@ org.eclipse.swt.SWTException: Widget is disposed
 
 !ENTRY riolog 1 0 2018-03-22 09:56:02.254
 !MESSAGE Connected to robot at 172.22.11.2
+
+!ENTRY riolog 1 0 2018-03-22 09:58:40.783
+!MESSAGE socket disconnected during read
+
+!ENTRY riolog 1 0 2018-03-22 09:58:42.311
+!MESSAGE failed to send keep alive, reconnecting
+
+!ENTRY riolog 1 0 2018-03-22 10:03:05.096
+!MESSAGE exiting listener
