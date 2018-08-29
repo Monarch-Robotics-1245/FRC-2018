@@ -35,10 +35,24 @@ public class RobotMap {
 
     //Output stream for camera on dashboard
     private static CvSource cameraOutputStream;
+    
+    private static final int gyroChannel = 0;
 
     //Deadzone values, don't set them to 1;
     private static final double translationalDeadZone = 0.1;
     private static final double rotationalDeadZone = 0.1;
+    private static final double gyroDeadZone = .25;
+    
+    
+   private static final int compressorChannel = 7; //check if works
+    
+    public static int getCompressorChannel() {
+    	return compressorChannel;
+    }
+    
+    public static double getGyroDeadZone() {
+    	return gyroDeadZone;
+    }
     
     public static int getLED() {
     	return led;
@@ -74,6 +88,10 @@ public class RobotMap {
     
     public static int getReleaseSolenoidChannel() {
     	return releaseSolenoidChannel;
+    }
+    
+    public static int getGyroChannel() {
+    	return gyroChannel;
     }
 
     //public static int getForwardLifterPressureChannel() { return forwardLifterPressureChannel; }

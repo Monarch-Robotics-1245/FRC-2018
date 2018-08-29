@@ -4,18 +4,23 @@ import edu.wpi.cscore.CvSink;
 import edu.wpi.cscore.CvSource;
 import edu.wpi.cscore.MjpegServer;
 import edu.wpi.cscore.UsbCamera;
+import edu.wpi.first.wpilibj.AnalogGyro;
 import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.interfaces.Gyro;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
 import org.usfirst.frc.team1245.robot.commands.GyroDrive;
+import org.usfirst.frc.team1245.robot.commands.LeftSwitch;
+import org.usfirst.frc.team1245.robot.commands.RightSwitch;
 import org.usfirst.frc.team1245.robot.subsystems.ArmElevator;
 import org.usfirst.frc.team1245.robot.subsystems.Drivetrain;
 import org.usfirst.frc.team1245.robot.subsystems.Gripper;
@@ -34,6 +39,8 @@ public class Robot extends IterativeRobot{
     		//new ArmElevator(RobotMap.getForwardLifterChannel(), RobotMap.getReverseLifterChannel(), RobotMap.getForwardLifterChannel2(), RobotMap.getReverseLifterChannel2());
     public static ReleaseSolenoid releaseSolenoid = new ReleaseSolenoid(RobotMap.getReleaseSolenoidChannel());
     private Command autonomousCommand;
+    private Compressor compressor;
+    
 
     private Thread visionThread;
     private Mat output;
@@ -42,14 +49,23 @@ public class Robot extends IterativeRobot{
     private CvSink cvSink;
     
     private Side robotSide;
+    private static Side dumpSide;
 
+    public static Side getDumpSide() {
+    	return dumpSide;
+    }
     //Spin up the bot!
     @Override
     public void robotInit(){
+    	//compressor = new Compressor(RobotMap.getCompressorChannel());
         //Initialize the input/output
         oi = new OI();
+        //default dumpSide is left;
+        dumpSide = Side.Left;
+        //initialize compressor
+        //compressor = new Compressor(RobotMap.getCompressorChannel());
         //Initialize camera stuff
-        new Thread(() ->  {
+        /*new Thread(() ->  {
         	grabberCamera = CameraServer.getInstance().startAutomaticCapture();
         	grabberCamera.setResolution(640,480);
         	
@@ -65,18 +81,14 @@ public class Robot extends IterativeRobot{
         		output = source;
         		outputStream.putFrame(output);
         	}
-        }).start();
+        }).start();*/
         
         //add stuff to SmartDashboard for auto code
-        robotPosition = new SendableChooser();
-        robotPosition.addDefault("Center Position", robotSide = Side.Center);
-        robotPosition.addObject("Left", robotSide = Side.Left);
-        robotPosition.addObject("Right", robotSide = Side.Right);
-        SmartDashboard.putData("Robot Starting Position",robotPosition);
-        
-        /*//turn on LED //didn't work
-        Solenoid ledSolenoid = new Solenoid(RobotMap.getLED());
-        ledSolenoid.set(true);*/
+        /*robotPosition = new SendableChooser();
+        robotPosition.addDefault("Center Position", new GyroDrive(this.getDumpSide(), Side.Center));
+        robotPosition.addObject("Left", new GyroDrive(this.getDumpSide(), Side.Left));
+        robotPosition.addObject("Right", new GyroDrive(this.getDumpSide(), Side.Right));
+        SmartDashboard.putData(robotPosition);*/
     }
 
     @Override
@@ -91,12 +103,19 @@ public class Robot extends IterativeRobot{
           if(gameData.length() > 0) {
         	  if(gameData.charAt(0) == 'L') {
         		  //Put left auto code here
-        		  autonomousCommand = new GyroDrive(Side.Left, robotSide);
+        		  dumpSide = Side.Left;
         	  } else {
         		  //Put right auto code here
-        		  autonomousCommand = new GyroDrive(Side.Right, robotSide);
+        		  dumpSide = Side.Right;
 		  	}
           }
+          
+        if(dumpSide == Side.Left) {
+        	autonomousCommand = new LeftSwitch();
+        } else {
+        	autonomousCommand = new RightSwitch();
+        }
+        //autonomousCommand = new GyroDrive();
         if (autonomousCommand != null){
             autonomousCommand.start();
         }
@@ -113,13 +132,14 @@ public class Robot extends IterativeRobot{
         if (autonomousCommand != null){
             autonomousCommand.cancel();
         }
+        //compressor.start();
     }
 
     @Override
     public void disabledInit(){
         //called when you disable the bot
-        //maybe at the end of the match?
-
+        //maybe at the end of the match?\
+    	//compressor.stop();
     }
 
     @Override
